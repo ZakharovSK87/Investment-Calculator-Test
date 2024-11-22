@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Investment Calculator Test</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Investment Calculator Test</h1>
+  <div class="container">
+    <div class="input-group">
+      <label for="initial-investment">Initial Investment (£):</label>
+      <input type="number" id="initial-investment" value="100" min="1" max="100000">
+      <button class="btn" id="decrease-investment">-</button>
+      <button class="btn" id="increase-investment">+</button>
+    </div>
+    <div class="input-group">
+      <label for="monthly-investment">Monthly Investment (£):</label>
+      <input type="number" id="monthly-investment" value="100" min="1" max="10000">
+      <button class="btn" id="decrease-monthly">-</button>
+      <button class="btn" id="increase-monthly">+</button>
+    </div>
+    <div class="input-group">
+      <label for="investment-period">Investment Period (Years):</label>
+      <input type="number" id="investment-period" value="10" min="1" max="40">
+      <button class="btn" id="decrease-period">-</button>
+      <button class="btn" id="increase-period">+</button>
+    </div>
+    <div class="input-group">
+      <label for="investment-options">Invest in:</label>
+      <select id="investment-options">
+        <option value="8.91">MSCI World (8.91%)</option>
+        <option value="11.19">S&P 500 (11.19%)</option>
+        <option value="4.95">Money Market Funds (4.95%)</option>
+        <option value="custom">Custom</option>
+      </select>
+      <input type="number" id="custom-rate" placeholder="Enter custom rate (%)" style="display: none;">
+    </div>
+  </div>
+  <div id="chart-container">
+    <canvas id="investment-chart"></canvas>
+  </div>
+  <div class="summary">
+    <p>Total Portfolio Value: <span id="total-portfolio">£0</span></p>
+    <p>Total Investments: <span id="total-investments">£0</span></p>
+    <p>Total Profit: <span id="total-profit">£0</span></p>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+
